@@ -52,7 +52,10 @@ def fetch_historical_price(currency, time_interval):
         return None
 
 def main():
-    asyncio.run(fetch_market_data('pyr',5,'1w'))
+    currency = 'pyr'
+    refresh_rate = 5
+    time_interval = '1d'
+    asyncio.run(fetch_market_data(currency,refresh_rate,time_interval))
 
 if __name__ == "__main__":
     main()
